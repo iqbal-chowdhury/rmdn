@@ -254,7 +254,7 @@ class MixtureDensityNetwork1D(object):
         return X_pred
 
     def get_density(self, X, linspace, max_lookback=None):
-        ''' Compute the conditional density '''
+        ''' Compute the conditional density over a sequence '''
         if max_lookback is None:
             max_lookback = X.shape[1]
 
@@ -271,7 +271,7 @@ class MixtureDensityNetwork1D(object):
         return density
 
     def P(self, X, max_lookback=None):
-        ''' Compute the conditional density '''
+        ''' Compute the conditional likelihood over a sequence '''
         if max_lookback is None:
             max_lookback = X.shape[1]
 
